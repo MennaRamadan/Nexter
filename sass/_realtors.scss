@@ -8,7 +8,11 @@
    align-content: center;
    justify-content: center;
    justify-items: center;
-   grid-row-gap: 2rem;;
+   grid-row-gap: 2rem;
+
+   @media only screen and (max-width: $bp-meduim){
+      grid-column: 1 / -1;
+  }
 
    &__list{
       display: grid;
@@ -16,6 +20,10 @@
       grid-column-gap: 2rem;
      grid-row-gap: 5vw;
      align-items: center; //x axis
+
+     @media only screen and (max-width: $bp-meduim){
+      grid-template-columns: repeat(3, min-content max-content);
+  }
    }
 
    &__img{
